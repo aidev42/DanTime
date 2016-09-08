@@ -1,0 +1,35 @@
+<ion-view view-title="Dan Time" ng-init="init()">
+<div class="bar bar-subheader">
+  <h2 class="title">We all have that one friend...</h2>
+</div>
+  <ion-content class="has-footer">
+    <div>
+      <div class="card padding-none">
+        <div class="item item-text-wrap">
+          <div class="list list-inset">
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Dan said it will take him:</span>
+              <input id="minInput" type="number" ng-model="time" placeholder="Insert minutes (ex. 20)"></input>
+            </label>
+            <label class="item item-input item-select item-stacked-label">
+              <div class="input-label">
+                What is Dan doing?:
+              </div>
+              <select ng-model="selectedActivity" ng-options="activity for activity in activities">
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="padding-left padding-right">
+        <div class="button-bar">
+          <a class="button button-dark" ng-click="convert(time,selectedActivity)">Convert To Dan Time</a>
+          <a class="button button-assertive" ng-click="time=''">Clear</a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+      <div class="bar bar-footer bar-stable">
+      <div class="title">Broken Door Productions</div>
+    </div>
+</ion-view>

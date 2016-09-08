@@ -1,0 +1,22 @@
+<ion-view title="Dan Time" ng-init="initTime()">
+<div class="bar bar-subheader">
+  <h2 class="title">We all have that one friend...</h2>
+</div>
+  <ion-nav-buttons side="left">
+    <button class="right button button-icon icon ion-arrow-left-c" ng-click="back()"></button>
+  </ion-nav-buttons>
+  <ion-content  class="has-footer">
+    <div>
+      <div class="card">
+        <div class="item item-divider">
+          <div class="item item-text-wrap">
+            When Dan said it would only take him {{times[0]}} minutes, what he meant was {{times[1]}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+    <div class="bar bar-footer bar-stable">
+      <div class="title">Broken Door Productions</div>
+    </div>
+</ion-view>

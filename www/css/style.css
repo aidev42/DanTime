@@ -1,0 +1,30 @@
+/* Empty. Add your own CSS if you like */
+
+/*div.nav-bar-block:nth-child(2) > ion-header-bar:nth-child(1) {
+  background-color: gray;
+}
+
+div.nav-bar-block:nth-child(2) > ion-header-bar:nth-child(1) > div:nth-child(1){
+  color: white;
+}*/
+
+h2 {
+  font-style: italic;
+}
+
+.input-label {
+   white-space: normal !important;
+   max-width: none !important;
+   width: 100%;
+}
+
+.card {
+  margin-top: 50px;
+}
+
+.bar-subheader {
+    border: 0px !important;
+    border-bottom-color: transparent !important;
+    background-image: none !important;
+    border-bottom: none !important;
+}
