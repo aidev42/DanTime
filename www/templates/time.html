@@ -1,7 +1,4 @@
 <ion-view title="Dan Time" ng-init="initTime()">
-<div class="bar bar-subheader">
-  <h2 class="title">We all have that one friend...</h2>
-</div>
   <ion-nav-buttons side="left">
     <button class="right button button-icon icon ion-arrow-left-c" ng-click="back()"></button>
   </ion-nav-buttons>
@@ -10,7 +7,7 @@
       <div class="card">
         <div class="item item-divider">
           <div class="item item-text-wrap">
-            When Dan said it would only take him {{times[0]}} minutes, what he meant was {{times[1]}}
+            When Dan said it would only take him {{data[0]}} minutes to {{data[1]}}, it means {{data[2]}}
           </div>
         </div>
       </div>

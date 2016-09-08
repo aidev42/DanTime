@@ -1,6 +1,6 @@
 <ion-view view-title="Dan Time" ng-init="init()">
 <div class="bar bar-subheader">
-  <h2 class="title">We all have that one friend...</h2>
+  <h2 class="title">Time Conversion Made Easy</h2>
 </div>
   <ion-content class="has-footer">
     <div>
@@ -8,12 +8,12 @@
         <div class="item item-text-wrap">
           <div class="list list-inset">
             <label class="item item-input item-stacked-label">
-              <span class="input-label">Dan said it will take him:</span>
+              <span class="input-label">Dan said it will take:</span>
               <input id="minInput" type="number" ng-model="time" placeholder="Insert minutes (ex. 20)"></input>
             </label>
             <label class="item item-input item-select item-stacked-label">
               <div class="input-label">
-                What is Dan doing?:
+                For him to:
               </div>
               <select ng-model="selectedActivity" ng-options="activity for activity in activities">
               </select>

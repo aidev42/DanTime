@@ -45,12 +45,12 @@ angular.module('starter', ['ionic', 'ngStorage'])
 
   $scope.init = function(){
     $scope.times = undefined;
-    $scope.activities = ["Watching TV", "At a friend's house", "At his house", "Gaming", "Eating a burrito", "Eating poutine", "Eating a poutine burrito", "Taking a shower"]
+    $scope.activities = ["Stop watching an action movie", "Arrive at a friend's house", "Leave his own his house", "Finish playing Overwatch", "Eat a burrito", "Eat poutine", "Eat a poutine burrito", "Take a shower"]
     $scope.selectedActivity = $scope.activities[0]
   }
 
   $scope.initTime = function(){
-    $scope.times = $localStorage.times;
+    $scope.data = $localStorage.data;
   }
 
   $scope.back = function() {
@@ -70,31 +70,35 @@ angular.module('starter', ['ionic', 'ngStorage'])
       switch(activity){
         case $scope.activities[0]:
           // Each one will have a text response incorporating existing time * its unique time multiplier
-          response = "however long is left in the movie."
+          response = "it'll take however long is left before the movie ends. Better hope it's not a marathon."
           break;
         case $scope.activities[1]:
-          response = "at least " + timeMultiplier(time,2,4) + " minutes."
+          response = "at a bare minimum " + timeMultiplier(time,2,4) + " minutes."
           break;
         case $scope.activities[2]:
-          response = timeMultiplier(time,1.5,2) + " minutes after you get to his house."
+          response = timeMultiplier(time,1.5,2) + " minutes after you first come to his house."
           break;
         case $scope.activities[3]:
-          response = "if you are lucky, only " + timeMultiplier(time,2,5) + " minutes."
+          response = "if you are lucky, it will only take about " + timeMultiplier(time,3,5) + " minutes."
           break;
         case $scope.activities[4]:
-          response = "about " + timeMultiplier(time,1.5,2) + " minutes. Lucky he's a quick eater."
+          response = "he'll take about " + timeMultiplier(time,1.5,2) + " minutes. Good thing he's a quick eater."
           break;
         case $scope.activities[5]:
-          response = "about " + timeMultiplier(time,1.75,2.5) + " minutes, plus another 30 minutes for him to describe it later."
+          response = "it will be at least " + timeMultiplier(time,1.75,2.5) + " minutes, plus another "+timeMultiplier(time,1,1.5)+" minutes for him to talk about it later."
           break;
         case $scope.activities[6]:
-          response = "you will never see him again."
+          response = "you'll likely never see him again."
           break;
         case $scope.activities[7]:
-          response = "about " + timeMultiplier(time,1.25,2) + " minutes after you get to his house."
+          response = "about " + timeMultiplier(time,1.25,2) + " minutes after you arrive at his house."
           break;
-      }
-      $localStorage.times = [time,response];
+      };
+      var lowerChar = activity[0].toLowerCase()
+      activity = activity.substring(1);
+      activity = lowerChar + activity
+
+      $localStorage.data = [time,activity,response];
       $state.go("time");
     }
   }
